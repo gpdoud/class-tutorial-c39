@@ -51,3 +51,8 @@ Customer customer2 = new Customer {
 
 // var aString = concat("abc", "def", "ghi");
 void concat(params string[] strings) { }
+
+
+static int Add(int a, int b) {
+    return a + b;
+}
