@@ -1,12 +1,31 @@
-﻿using class_tutorial;
+﻿
+using class_tutorial;
 
-Student joe = new Student {
-    Id = 1,
-    Firstname = "Joe",
-    Age = 41,
-    IsActive = true,
-    DateCreated = new DateTime(2023, 2, 10)
-};
+
+
+var t = new Test();
+var id = t.Id;
+var count = t.Count;
+t.Count = -30;
+
+Student joe = new Student("Joe", 41);
+Student jane = new Student("Jane", 31);
+
+
+//Student pat = new Student(101, "Pat", 22);
+//
+//Console.WriteLine($"{pat.Id} | {pat.Firstname} | {pat.Age} | {pat.DateCreated}");
+
+Console.WriteLine($"instance joe's first name is {joe.Firstname}");
+joe.ChangeFirstname("Joseph");
+Console.WriteLine($"instance joe's first name is {joe.Firstname}");
+Console.WriteLine($"instance jane's age is {jane.Age}");
+jane.IncrementAge();
+Console.WriteLine($"instance jane's age is {jane.Age}");
+Console.WriteLine($"instance jane's date created is {jane.DateCreated}");
+var JaneDateCreatedPlus30Days = jane.CalcCreateDatePlus30Days();
+Console.WriteLine($"instance jane's date created plus 30 days is {JaneDateCreatedPlus30Days}");
+
 
 Console.WriteLine($"Id          : {joe.Id}");
 Console.WriteLine($"Firstname   : {joe.Firstname}");
@@ -28,3 +47,7 @@ Customer customer2 = new Customer {
 };
 
 //Console.WriteLine(customer2.Name);
+
+
+// var aString = concat("abc", "def", "ghi");
+void concat(params string[] strings) { }
